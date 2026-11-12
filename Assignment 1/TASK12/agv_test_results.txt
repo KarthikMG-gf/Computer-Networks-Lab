@@ -1,0 +1,69 @@
+TASK 12 - AGV TEST RESULTS
+==========================
+
+A. TRAFFIC CALCULATION (THEORETICAL)
+------------------------------------
+The accompanying Python program currently uses these WORKING ASSUMPTIONS:
+
+- AGV message size: 500 bytes
+- Message rate: 20 messages/second per AGV
+- Number of AGVs: 10
+- Capacity headroom: 1.5x
+
+Calculation:
+Traffic per AGV = 500 bytes x 8 bits/byte x 20 messages/second
+                 = 80,000 bits/second
+                 = 0.080 Mbps
+
+Total AGV traffic = 0.080 Mbps x 10
+                  = 0.800 Mbps
+
+Recommended capacity = 0.800 Mbps x 1.5
+                     = 1.200 Mbps
+
+IMPORTANT: Replace these assumptions if Task 12 specifies different
+packet sizes, message rates, or AGV counts. The calculation is not a
+measured network test.
+
+B. NETWORK TEST RESULTS
+-----------------------
+Do not present invented performance values as actual test results.
+Fill this table using measurements from your real 5G testbed or a
+properly configured simulation.
+
+Test environment/tool:
+Date and time:
+Number of AGVs:
+5G configuration:
+
+Metric                  Measured result
+----------------------  ----------------
+Average latency (ms):
+Maximum latency (ms):
+Jitter (ms):
+Packet loss (%):
+Application throughput (Mbps):
+Test duration (seconds):
+
+C. RESULT INTERPRETATION
+------------------------
+- Compare average and maximum latency with the AGV control requirement
+  stated in the assignment.
+- Check whether packet loss is acceptable for the control application.
+- Compare measured application throughput with the calculated AGV
+  traffic demand and recommended capacity.
+- Repeat the test with the intended number of AGVs and record the setup.
+
+D. SUBMISSION EVIDENCE
+----------------------
+Add the following genuine evidence to the Task12 GitHub folder:
+1. Screenshot of the Python program output.
+2. Screenshot/export of the actual simulation or test configuration.
+3. Actual test log or CSV containing latency, jitter, packet loss,
+   throughput, and test duration.
+4. Update this file with the measured values and explain the result.
+
+Note: Values such as 2.3 ms latency, 0.0% packet loss, 48 Mbps throughput,
+or 0.5 ms jitter shown in a conceptual illustration are examples only.
+They are NOT verified test results and must not be submitted as measured
+results unless you independently obtain those measurements.

@@ -1,0 +1,30 @@
+TASK 12 - PRIVATE 5G AND 50 AGVs
+
+A. Impact analysis
+The assignment does not specify the packet size or transmission interval for
+each AGV. Do not invent these values. Obtain them from the instructor or
+clearly state an engineering assumption before calculating added AGV traffic.
+
+If each AGV sends S bytes every T seconds:
+Traffic per AGV (bps) = (S * 8) / T
+Traffic for 50 AGVs (bps) = 50 * S * 8 / T
+
+B. Test the original design
+Use the supplied handover values:
+- Wi-Fi AP spacing = 30 m; handover = 150 ms.
+- Private 5G cell coverage = 300 m; handover = 20 ms.
+- AGV speed = 2 m/s; route = 1.2 km.
+State the coverage-boundary assumption when counting handovers.
+Compare the interruption with the 10 ms command deadline.
+
+C. Adaptation
+Document a revised architecture, for example:
+- Private 5G URLLC for moving AGVs and suitable robot-control traffic.
+- Wi-Fi 6 for office and non-critical mobile devices.
+- Fibre backbone between access/distribution/core networks.
+- QoS, redundancy, segmentation and monitoring.
+
+D. Evidence-based defence
+Compare latency, availability, coverage, capacity, cost, interference,
+security and operational complexity. Add the calculations and diagrams.
+
