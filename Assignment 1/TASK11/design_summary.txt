@@ -1,0 +1,21 @@
+TASK 11 - FINAL NETWORK DESIGN EVIDENCE TEMPLATE
+
+1. Wired backbone:
+   - State the selected fibre/copper media and distances.
+2. Robot control:
+   - State the selected wired/industrial Ethernet or private 5G URLLC approach.
+   - State the latency target and QoS treatment.
+3. Sensors:
+   - State which sensors use wired Ethernet, Wi-Fi, Zigbee or LoRaWAN.
+4. CCTV:
+   - State local recording, video uplink and QoS treatment.
+5. Office:
+   - State Wi-Fi/Ethernet and Internet/head-office connectivity.
+6. Error control and flow control:
+   - Identify CRC, FEC, ARQ and sliding-window choices per link.
+7. Two largest remaining risks:
+   - Explain each risk and mitigation.
+8. Five-plant scalability:
+   - Calculate aggregate bandwidth and describe WAN redundancy/security.
+
+
