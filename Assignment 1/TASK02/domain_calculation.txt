@@ -1,0 +1,38 @@
+TASK 2 - NETWORK DOMAIN CALCULATION
+
+ORIGINAL NETWORK
+
+Collision Domains:
+3 hub segments
+1 main switch-router connection
+1 router-second switch connection
+12 IP phone connections
+
+Total = 17 Collision Domains
+
+Broadcast Domains:
+G0/0 network = 1
+G0/1 network = 1
+
+Total = 2 Broadcast Domains
+
+
+ALTERNATIVE NETWORK
+
+Collision Domains:
+24 PC-switch connections
+3 access-switch uplinks
+1 main switch-router connection
+1 router-second switch connection
+12 IP phone connections
+
+Total = 41 Collision Domains
+
+Broadcast Domains:
+Total = 2 Broadcast Domains
+
+
+CONCLUSION:
+Replacing hubs with switches increases collision
+domain separation and improves network performance.
+Broadcast domains remain unchanged.

@@ -1,0 +1,6 @@
+TASK 2 GITHUB EVIDENCE
+- network_topology.pkt: create and save in Cisco Packet Tracer.
+- topology.png: screenshot of your actual topology.
+- device_config.txt: actual router/switch configuration, if configured.
+- domain_calculation.txt: included calculation record.
+Use 24 PCs total (8 PCs on each of the 3 hubs), not 36.
