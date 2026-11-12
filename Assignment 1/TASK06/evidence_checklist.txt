@@ -1,0 +1,15 @@
+TASK 6 - GITHUB EVIDENCE CHECKLIST
+
+Add these files after doing the practical work:
+
+[ ] ethtool_before.txt - actual output before changing settings (Linux)
+[ ] ethtool_after.txt - actual output after changing settings (Linux)
+[ ] ip_link_counters.txt - actual interface counters
+[ ] nic_before.png - screenshot of initial NIC settings
+[ ] nic_after.png - screenshot after configuration
+[ ] switch_port.png - screenshot of matching switch port configuration
+[ ] ring_recovery_evidence.txt - vendor specification or actual test result
+[ ] output.png - screenshot of any command/program output
+
+Do not create fake screenshots or fabricated measurements.
+The assignment does not require a Python program for Task 6.

@@ -1,0 +1,11 @@
+TASK 6 - MAC ADDRESS NOTES
+
+Address: 01:00:5e:0a:01:02
+Classification: Ethernet multicast/group address.
+Reason: 01:00:5e is the IPv4 multicast mapping prefix.
+
+Address: 3c:52:82:4e:11:07
+OUI: 3C-52-82
+Meaning: The first three bytes identify the organization assigned the MAC
+address block by the IEEE Registration Authority. Use the current IEEE OUI
+registry to determine the registered organization name.

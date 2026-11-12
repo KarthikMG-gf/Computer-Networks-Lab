@@ -1,0 +1,13 @@
+TASK 6 - WINDOWS ETHERNET SETTINGS
+
+1. Open Device Manager.
+2. Expand Network adapters.
+3. Right-click the active Ethernet adapter and select Properties.
+4. Open the Advanced tab.
+5. Select Speed & Duplex.
+6. Choose Auto Negotiation (or the matching setting supported by both ends).
+7. Click OK.
+8. Disable/enable the adapter if required, then verify the link status.
+
+Take screenshots of the adapter setting before and after the change.
+The switch port must be configured consistently.

@@ -1,0 +1,24 @@
+TASK 6 - LINUX ETHERNET CHECK
+
+1. Find the interface name:
+   ip link
+
+2. Inspect current Ethernet settings:
+   sudo ethtool <interface>
+
+3. Enable auto-negotiation:
+   sudo ethtool -s <interface> autoneg on
+
+4. Verify:
+   sudo ethtool <interface>
+
+5. Check interface counters:
+   ip -s link show <interface>
+
+6. Optional driver statistics:
+   sudo ethtool -S <interface>
+
+IMPORTANT:
+- Replace <interface> with the real interface name, such as enp3s0.
+- The switch port must also negotiate/configure the same speed and duplex.
+- Capture before-and-after outputs; do not claim a fix unless you tested it.

@@ -1,0 +1,82 @@
+TASK 6 - ETHERNET PORT REPORT
+
+Given NIC report
+----------------
+Speed: 100Mb/s
+Duplex: Half
+Auto-negotiation: off
+Link detected: yes
+rx_errors: 2381
+late_collisions: 412
+crc_errors: 1907
+
+INTERPRETATION
+--------------
+A late collision is a collision detected after the normal collision window.
+It commonly indicates a duplex mismatch, excessive cable length, or a physical
+layer problem in a legacy half-duplex Ethernet segment.
+
+A CRC error means the received Ethernet frame failed its Frame Check Sequence
+check. It can be caused by cabling, interference, faulty ports/NICs, or duplex
+mismatch.
+
+The combination of late collisions and CRC errors is consistent with a
+duplex mismatch. The assignment suggests the likely cause is the PC operating
+at 100 Mb/s half duplex while the gigabit switch port is set to auto.
+
+LINUX COMMANDS
+--------------
+Inspect interface:
+    sudo ethtool eth0
+
+Enable auto-negotiation:
+    sudo ethtool -s eth0 autoneg on
+
+Check the result:
+    sudo ethtool eth0
+
+Replace eth0 with the actual interface name. The switch port must also be
+configured consistently. Do not force only one end to full duplex.
+
+WINDOWS CONFIGURATION
+---------------------
+Device Manager > Network adapters > select adapter > Properties > Advanced
+> Speed & Duplex > Auto Negotiation.
+
+MAC ADDRESS ANALYSIS
+--------------------
+01:00:5e:0a:01:02
+- The first octet has the group/multicast bit set.
+- 01:00:5e is the IPv4 multicast Ethernet address range.
+- Therefore, this address represents a multicast group, not one individual
+  network interface.
+
+3c:52:82:4e:11:07
+- 3c:52:82 is the Organizationally Unique Identifier (OUI) portion.
+- The OUI identifies the organization assigned that MAC address block by IEEE.
+- Consult the current IEEE Registration Authority OUI database to name the
+  registered organization; do not guess the vendor.
+
+JUMBO FRAMES
+------------
+A 9,000-byte MTU may help a CCTV storage server when transferring large files
+or video streams by reducing per-byte protocol overhead and packet-processing
+load. It does not automatically improve latency for small robot commands.
+
+For jumbo frames to work, every device along the end-to-end path must support
+a compatible MTU: sender NIC, switches, receiver NIC and storage server.
+The network configuration must be consistent to avoid fragmentation or drops.
+
+RING VS STAR ALTERNATIVE
+------------------------
+Do not enter an invented recovery time. Recovery depends on the industrial
+switch model and ring protocol (for example, vendor-specific MRP/ERPS
+implementation), configuration and topology.
+
+For the report, record:
+- Ring protocol and configured recovery specification from the switch vendor.
+- Measured or documented recovery time after one cable cut.
+- Which ring segment/devices temporarily lose connectivity.
+- In a star, devices attached beyond the cut link lose connectivity; other
+  branches generally remain connected, while a failed central switch can
+  affect all devices connected to it.
